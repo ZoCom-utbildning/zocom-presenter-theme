@@ -1,7 +1,8 @@
 const fs = require('fs-extra');
 const sass = require('sass');
-
+const path = require('path')
 const fileName = 'zocom';
+const OUTPUT_FOLDER = 'docs'
 
 const settings = {
     file: `./src/${fileName}.scss`,
@@ -13,22 +14,22 @@ sass.render(settings, (err, result) => {
 
         let dir = fs.readdirSync('./');
 
-        if(dir.includes(`dist`)) {
-            fs.rmdirSync(`./dist`, { recursive: true });
+        if(dir.includes(OUTPUT_FOLDER)) {
+            fs.rmdirSync(OUTPUT_FOLDER, { recursive: true });
             console.info('dist-folder found, removing.');
         }
 
-        fs.mkdirSync(`./dist`);
+        fs.mkdirSync(OUTPUT_FOLDER);
         console.info('dist-folder created.');
 
-        fs.copySync(`./src/assets`, `./dist/assets`);
-        console.info('assets-folder copied to dist-folder.');
+        fs.copySync(`./src/assets`, path.join(OUTPUT_FOLDER, 'assets'));
+        console.info(`assets-folder copied to ${OUTPUT_FOLDER}-folder.`);
 
-        fs.writeFile(`./dist/${fileName}.css`, result.css, (error) => {
+        fs.writeFile(path.join(OUTPUT_FOLDER,`${fileName}.css`), result.css, (error) => {
             if(error) {
                 console.error(error);
             } else {
-                console.info('Files created and put into dist-folder.');
+                console.info(`Files created and put into ${OUTPUT_FOLDER}-folder.`);
             }
         });
       } else {
