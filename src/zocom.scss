@@ -377,28 +377,28 @@
 
 	.intro {
 		background-color: $red;
-		background-image: url('/assets/bg-o-br.svg'),  url('/assets/logo-white.svg');
+		background-image: url('assets/bg-o-br.svg'),  url('assets/logo-white.svg');
 		background-repeat: no-repeat, no-repeat;
 		background-size: auto, 10rem;
 		background-position: right bottom, center 92%;
 	}
 
 	.basic {
-		background-image: url('/assets/bg-o-bl-white.svg'), url('/assets/bg-o-white.svg');
+		background-image: url('assets/bg-o-bl-white.svg'), url('assets/bg-o-white.svg');
 		background-repeat: no-repeat, no-repeat;
 		background-position: bottom left, 80% 30%;
 		background-size: 40%, 20%;
 	}
 
 	.complex {
-		background-image: url('/assets/bg-o-br.svg'), url('/assets/bg-dots-white.svg');
+		background-image: url('assets/bg-o-br.svg'), url('assets/bg-dots-white.svg');
 		background-repeat: no-repeat, no-repeat;
 		background-position: bottom right, 5rem 5rem;
 	}
 
 	.code {
 		background-color: $purple;
-		background-image: url('/assets/code.png'), url('/assets/bg-o-big-bl.svg');
+		background-image: url('assets/code.png'), url('assets/bg-o-big-bl.svg');
 		background-repeat: no-repeat, no-repeat;
 		background-position: bottom right, bottom left;
 		background-size: 40%, auto;
@@ -406,7 +406,7 @@
 
 	.task {
 		background-color: $yellow;
-		background-image: url('/assets/panic.png'), url('/assets/bg-o-big-bl.svg');
+		background-image: url('assets/panic.png'), url('assets/bg-o-big-bl.svg');
 		background-repeat: no-repeat, no-repeat;
 		background-position: 80% bottom, bottom left;
 		background-size: 32%, auto;
@@ -414,7 +414,7 @@
 
 	.discussion {
 		background-color: $green;
-		background-image: url('/assets/bears.png'), url('/assets/bg-o-big-bl.svg');
+		background-image: url('assets/bears.png'), url('assets/bg-o-big-bl.svg');
 		background-repeat: no-repeat, no-repeat;
 		background-position: left bottom, bottom left;
 		background-size: 42%, 60% auto;
