@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const sass = require('sass');
 const path = require('path')
 const fileName = 'zocom';
-const OUTPUT_FOLDER = 'docs'
+const OUTPUT_FOLDER = 'dist'
 
 const settings = {
     file: `./src/${fileName}.scss`,
