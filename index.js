@@ -16,11 +16,11 @@ sass.render(settings, (err, result) => {
 
         if(dir.includes(OUTPUT_FOLDER)) {
             fs.rmdirSync(OUTPUT_FOLDER, { recursive: true });
-            console.info('dist-folder found, removing.');
+            console.info(`${OUTPUT_FOLDER}-folder found, removing.`);
         }
 
         fs.mkdirSync(OUTPUT_FOLDER);
-        console.info('dist-folder created.');
+        console.info(`${OUTPUT_FOLDER}-folder created.`);
 
         fs.copySync(`./src/assets`, path.join(OUTPUT_FOLDER, 'assets'));
         console.info(`assets-folder copied to ${OUTPUT_FOLDER}-folder.`);
