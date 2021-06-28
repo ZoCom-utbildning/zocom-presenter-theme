@@ -2,11 +2,11 @@ const fs = require('fs-extra');
 const sass = require('sass');
 const path = require('path')
 const fileName = 'zocom';
-const OUTPUT_FOLDER = 'dist'
+const OUTPUT_FOLDER = 'docs'
 
 const settings = {
-    file: `./src/${fileName}.scss`,
-    outFile: `./dist/${fileName}.css`
+    file: path.join(`./src/`, `${fileName}.scss`),
+    outFile: path.join(OUTPUT_FOLDER, `${fileName}.css`)
 }
 
 sass.render(settings, (err, result) => {
