@@ -1,0 +1,91 @@
+
+/*********************************************
+* ZOCOM SLIDE TEMPLATES LAYOUT TWEEKS
+*********************************************/
+
+.reveal {
+  .slides{
+    display: flex;
+    flex-direction: column;
+
+    section:not(.stack){
+      display: flex !important;
+      flex-direction: column;
+    }    
+
+    section:not(.stack, .intro, .quote){
+      padding-top: 2.5rem;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      display: none;
+    }
+    .intro{
+      h3{
+        margin-top: 10rem;
+      }
+    }
+    .code,.task{
+      h1, h2, h3, h4, p, li { 
+        text-align: left;
+      }
+    }
+    
+    section.discussion, section.task, section.code{
+      max-width: 50%;
+      // margin-right: -100px;
+      align-self: flex-end;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100%;
+      
+      h1, h2, h3, h4, p, li { 
+        text-align: left;         
+      }
+    }
+    
+    section.task, section.code{
+      align-self: flex-start;
+    }
+
+    // 
+    // Column Layout
+    // 
+    section[data-layout]{
+      display: grid !important;
+      grid-template-rows: auto 100%;
+      align-items: start;
+
+      // 
+      // Heading across columns
+      // 
+      &>h1:first-of-type,
+      &>h2:first-of-type{ 
+        grid-column: span 2;
+      }
+    }
+    section[data-layout="two-column"]{
+      grid-template-columns: 1fr 1fr;
+    }
+    section[data-layout="three-column"]{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+  }
+} 
+
+.reveal .intro {
+  h1 { margin: 4rem 0 1rem 0; }
+  h2 { margin: 2rem 0; }
+  h6 { 
+    font-size: 1.6rem; 
+    margin-top: 6rem; 
+    
+    > a {
+      text-decoration: none;
+      font-style: italic;
+      font-weight: 600;
+      color: rgba(255,255,255,.9);
+    }
+  }
+}

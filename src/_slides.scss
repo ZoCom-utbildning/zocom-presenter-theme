@@ -1,0 +1,137 @@
+.reveal .slides section,
+.reveal .slides section>section {
+	line-height: 1.4;
+	font-weight: inherit;
+}
+
+.reveal .backgrounds {
+	.slide-background {
+    
+    &.intro {
+      background-color: $red;
+      background-image: url('assets/zocircle-white.svg'),  url('assets/dots-white.svg');
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto, auto;
+      background-position: right -10rem bottom -15rem, 10% 20%;
+    }
+
+    &.complex {
+      background-image: url('assets/zocircle-black.svg'), url('assets/zocircle-black.svg');
+      background-repeat: no-repeat, no-repeat;
+      background-position: top 10rem right 5rem, bottom -5rem left -10rem;
+      background-size: 20%, 50%;
+    }
+  
+    &.code {
+      background-color: $blue;
+      background-image: url('assets/code.png'), url('assets/bg-o-big-bl.svg');
+      background-repeat: no-repeat, no-repeat;
+      background-position: bottom right, bottom left;
+      background-size: 40%, auto;
+    }
+  
+    &.task {
+      background-color: $yellow;
+      background-image: url('assets/panic.png'), url('assets/bg-o-big-bl.svg');
+      background-repeat: no-repeat, no-repeat;
+      background-position: 80% bottom, bottom left;
+      background-size: 32%, auto;
+    }
+  
+    &.discussion {
+      background-color: $green;
+      background-image: url('assets/bears.png'), url('assets/bg-o-big-bl.svg');
+      background-repeat: no-repeat, no-repeat;
+      background-position: left bottom, bottom left;
+      background-size: 42%, 60% auto;
+    }
+    
+    &.quote{      
+      background-color: $purple;
+      background-image: url('assets/zocircle-white.svg');
+      background-repeat: no-repeat;
+      background-position: bottom -10rem right -10rem;
+      background-size: contain;
+    }
+
+    &.slide-background:not(.complex, .code, .task, .discussion, .intro, .quote, .stack) {
+      background-image: url('assets/zocircle-black.svg');
+      background-repeat: no-repeat;
+      background-position: bottom -10rem right -10rem;
+      background-size: contain;
+    }
+
+    &.red    	{ background-color: $red; }
+    &.yellow 	{ background-color: $yellow; }
+    &.green  	{ background-color: $green; }
+    &.blue   	{ background-color: $blue; }
+    &.pink   	{ background-color: $pink; }
+    &.purple 	{ background-color: $purple; }
+    &.black   { background-color: $darkGrey; }
+    &.gray    { background-color: $lightGrey; }
+  }
+  
+}
+
+/*********************************************
+ * ZoCom SLIDE TWEAKS
+ *********************************************/
+.reveal .slides{
+  
+  .task h2, .code h2{position: relative;}
+  .task h2::after, .code h2::after{
+    content: '';
+    width: 120px;
+    height: 6px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 140%;
+  }
+  .code h2::after{background-color: white;}
+
+
+  .red,
+  .green,
+  .blue,
+  .purple, 
+  .darkgrey,
+  .intro,
+  .code,
+  .quote,
+  .discussion,
+  .black {
+    
+    h1, h2, h3, h4, p, li { 
+      color: white;
+    }
+  
+    blockquote {
+  
+      span {
+        &::before {
+          border-top: .14rem solid white;
+        }
+      }
+  
+      &::before{
+        color: rgba(255,255,255,.8);
+      }
+        
+      &::after{
+        color: rgba(255,255,255,.8);
+      }
+    }
+  }
+
+  .yellow,
+  .gray,
+  .pink{
+    h1, h2, h3, h4, p, li { 
+      color: black;
+    }
+  }
+}
+
+
+

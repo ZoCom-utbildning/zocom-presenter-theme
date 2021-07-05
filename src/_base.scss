@@ -1,0 +1,22 @@
+// Colors
+$red: #FE2C2C;
+$yellow: #FED253;
+$green: #4AB396;
+$blue: #048ED9;
+$pink: #FBB3B2;
+$purple: #431261;
+$darkGrey: #141414;
+$lightGrey: #EEEEEE;
+$middleGrey: rgba(0,0,0,.5);
+
+// Vertical spacing between blocks of text
+$blockMargin: 1rem;
+
+// Default background of the presentation
+$backgroundColor: #FFF;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: $backgroundColor;
+}

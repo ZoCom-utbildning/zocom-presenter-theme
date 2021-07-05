@@ -1,0 +1,283 @@
+.reveal-viewport {
+	@include bodyBackground();
+	background-color: $backgroundColor;
+}
+.slides{
+  // width: 1200px !important;
+}
+
+.reveal {
+	font-family: $mainFont;
+	font-size: $mainFontSize;
+	font-weight: normal;
+	color: $mainColor;
+}
+
+.reveal ::selection {
+	color: $selectionColor;
+	background: $selectionBackgroundColor;
+	text-shadow: none;
+} 
+
+.reveal ::-moz-selection {
+	color: $selectionColor;
+	background: $selectionBackgroundColor;
+	text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section>section {
+	line-height: 1.4;
+	font-weight: inherit;
+}
+
+.reveal img,
+.reveal video,
+.reveal iframe {
+	max-width: 85%;
+	max-height: 85%;
+	border: none;
+}
+
+.reveal img {
+	max-height: 50vh;
+	border-radius: .2rem;
+}
+
+.reveal strong,
+.reveal b {
+	font-weight: bold;
+}
+
+.reveal em {
+	font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+	display: inline-block;
+	text-align: left;
+	margin: 0 0 0 1em;
+  // width: 100%;
+}
+
+.reveal ol {
+	list-style-type: decimal;
+}
+
+.reveal ul {
+	list-style-type: disc;
+}
+
+.reveal ul ul {
+	list-style-type: square;
+}
+
+.reveal ul ul ul {
+	list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+	display: block;
+	margin-left: 40px;
+}
+
+.reveal li {
+	margin: .5rem 0;
+}
+
+.reveal dt {
+	font-weight: bold;
+}
+
+.reveal dd {
+	margin-left: 40px;
+}
+
+.reveal blockquote {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: $blockMargin auto;
+	padding: 3rem;
+	box-sizing: border-box;
+	font-size: 3rem;
+	font-style: italic;
+	position: relative;
+
+	p {
+		padding: 0 2rem;
+	}
+
+	&::before{
+		font-family:Arial;
+		content: "\201C";
+		color: $middleGrey;
+		font-size:3em;
+		position: absolute;
+		left: 1rem;
+		top: .2rem;
+	}
+	  
+	&::after{
+		font-family:Arial;
+		content: "\201D";
+		color: $middleGrey;
+		font-size: 3em;
+		position: absolute;
+		right: 2.5rem;
+		bottom: -2.4rem;
+	}
+
+	span {
+		display: block;
+		padding: 0;
+		transform: translateY(3rem);
+		opacity: .8;
+		font-size: 2rem;
+
+		&::before {
+			display: inline-block;
+			content: "";
+			border-top: .14rem solid black;
+			width: 3rem;
+			margin: 0 1rem;
+			transform: translateY(-.6rem);
+		}
+	}
+
+	p:first-child,
+	p:last-child {
+		display: inline-block;
+	}
+}
+
+.reveal q {
+	font-style: italic;
+}
+
+.reveal pre {
+	display: block;
+	position: relative;
+	width: 90%;
+	margin: $blockMargin auto;
+	text-align: left;
+	font-size: 1em;
+	font-family: $codeFont;
+	line-height: 1.3em;
+	border-radius: .25rem;
+	word-wrap: break-word;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal code {
+	font-family: $codeFont;
+	text-transform: none;
+}
+
+.reveal pre code {
+	display: block;
+	padding: 1rem;
+	border-radius: .25rem;
+	overflow: auto;
+	max-height: 400px;
+	word-wrap: normal;
+}
+
+.reveal table {
+	margin: auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.reveal table th {
+	font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+	text-align: left;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	border-bottom: 1px solid;
+}
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+	text-align: center;
+}
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+	text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.reveal sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+.reveal sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
+.reveal small {
+	display: inline-block;
+	font-size: 0.6em;
+	line-height: 1.2em;
+	vertical-align: top;
+}
+
+.reveal small * {
+	vertical-align: top;
+}
+
+.reveal img {
+	margin: $blockMargin 0;
+}
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+
+ .reveal .r-frame {
+	border: 4px solid $mainColor;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+	transition: all .15s linear;
+}
+
+.reveal a:hover .r-frame {
+	border-color: $linkColor;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+
+.reveal .controls {
+	color: white;
+}
+
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+
+.reveal .progress {
+	background: rgba(0,0,0,0.2);
+	color: $linkColor;
+}
