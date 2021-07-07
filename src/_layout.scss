@@ -51,7 +51,8 @@
     // 
     // Column Layout
     // 
-    section[data-layout]{
+    section[data-layout="two-column"],
+    section[data-layout="three-column"]{
       display: grid !important;
       grid-template-rows: auto 100%;
       align-items: start;
@@ -69,6 +70,12 @@
     }
     section[data-layout="three-column"]{
       grid-template-columns: 1fr 1fr 1fr;
+    }
+    section[data-layout="center"]{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0;
     }
     
   }
