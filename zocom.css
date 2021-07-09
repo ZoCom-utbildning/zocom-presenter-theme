@@ -1,0 +1,611 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+/*********************************************
+* HEADERS
+*********************************************/
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: 0 0 2rem 0;
+  color: #141414;
+  font-family: "Cairo", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: normal;
+  text-shadow: none;
+  word-wrap: break-word;
+}
+.reveal h1 {
+  font-size: 3.6rem;
+  font-weight: 600;
+  text-shadow: none;
+}
+.reveal h2 {
+  font-size: 2.47rem;
+}
+.reveal h3 {
+  font-size: 1.86rem;
+}
+.reveal h4 {
+  font-size: 1.4rem;
+}
+.reveal .intro h1 {
+  font-size: 4.69rem;
+}
+
+/*********************************************
+* PARAGRAPHS
+*********************************************/
+.reveal p {
+  margin: 1rem 0;
+  line-height: 1.3;
+}
+
+/*********************************************
+* LINKS
+*********************************************/
+.reveal a, .reveal a:link, .reveal a:visited {
+  color: #431261;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: #7e22b7;
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #160620;
+}
+
+.reveal-viewport {
+  background: #FFF;
+  background-color: #FFF;
+}
+
+.reveal {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #141414;
+}
+
+.reveal ::selection {
+  color: #EEEEEE;
+  background: #FED253;
+  text-shadow: none;
+}
+
+.reveal ::-moz-selection {
+  color: #EEEEEE;
+  background: #FED253;
+  text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.4;
+  font-weight: inherit;
+}
+
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 85%;
+  max-height: 85%;
+  border: none;
+}
+
+.reveal img {
+  max-width: 90%;
+  border-radius: 0.2rem;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal li {
+  margin: 0.5rem 0;
+}
+
+.reveal dt {
+  font-weight: bold;
+}
+
+.reveal dd {
+  margin-left: 40px;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 3rem;
+  box-sizing: border-box;
+  font-size: 3rem;
+  font-style: italic;
+  position: relative;
+}
+.reveal blockquote p {
+  padding: 0 2rem;
+}
+.reveal blockquote::before {
+  font-family: Arial;
+  content: "“";
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 3em;
+  position: absolute;
+  left: 1rem;
+  top: 0.2rem;
+}
+.reveal blockquote::after {
+  font-family: Arial;
+  content: "”";
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 3em;
+  position: absolute;
+  right: 2.5rem;
+  bottom: -2.4rem;
+}
+.reveal blockquote span {
+  display: block;
+  padding: 0;
+  transform: translateY(3rem);
+  opacity: 0.8;
+  font-size: 2rem;
+}
+.reveal blockquote span::before {
+  display: inline-block;
+  content: "";
+  border-top: 0.14rem solid black;
+  width: 3rem;
+  margin: 0 1rem;
+  transform: translateY(-0.6rem);
+}
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+.reveal q {
+  font-style: italic;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 1rem auto;
+  text-align: left;
+  font-size: 1em;
+  font-family: monospace;
+  line-height: 1.3em;
+  border-radius: 0.25rem;
+  word-wrap: break-word;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal code {
+  font-family: monospace;
+  text-transform: none;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table th[align=center],
+.reveal table td[align=center] {
+  text-align: center;
+}
+
+.reveal table th[align=right],
+.reveal table td[align=right] {
+  text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal small * {
+  vertical-align: top;
+}
+
+.reveal img {
+  margin: 1rem 0;
+}
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+.reveal .r-frame {
+  border: 4px solid #141414;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+
+.reveal a:hover .r-frame {
+  border-color: #431261;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: white;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: #431261;
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.4;
+  font-weight: inherit;
+}
+
+.reveal .backgrounds .slide-background.intro {
+  background-color: #FE2C2C;
+  background-image: url("assets/zocircle-white.svg"), url("assets/dots-white.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
+  background-position: right -10rem bottom -15rem, 10% 20%;
+}
+.reveal .backgrounds .slide-background.complex {
+  background-image: url("assets/zocircle-black.svg"), url("assets/zocircle-black.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 10rem right 5rem, bottom -5rem left -10rem;
+  background-size: 20%, 50%;
+}
+.reveal .backgrounds .slide-background.code {
+  background-color: #048ED9;
+  background-image: url("assets/code.png"), url("assets/bg-o-big-bl.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, bottom left;
+  background-size: 40%, auto;
+}
+.reveal .backgrounds .slide-background.task {
+  background-color: #FED253;
+  background-image: url("assets/panic.png"), url("assets/bg-o-big-bl.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 80% bottom, bottom left;
+  background-size: 32%, auto;
+}
+.reveal .backgrounds .slide-background.discussion {
+  background-color: #4AB396;
+  background-image: url("assets/bears.png"), url("assets/bg-o-big-bl.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, bottom left;
+  background-size: 42%, 60% auto;
+}
+.reveal .backgrounds .slide-background.quote {
+  background-color: #431261;
+  background-image: url("assets/zocircle-white.svg");
+  background-repeat: no-repeat;
+  background-position: bottom -10rem right -10rem;
+  background-size: contain;
+}
+.reveal .backgrounds .slide-background.slide-background:not(.complex, .code, .task, .discussion, .intro, .quote, .stack) {
+  background-image: url("assets/zocircle-black.svg");
+  background-repeat: no-repeat;
+  background-position: bottom -10rem right -10rem;
+  background-size: contain;
+}
+.reveal .backgrounds .slide-background.red {
+  background-color: #FE2C2C;
+}
+.reveal .backgrounds .slide-background.yellow {
+  background-color: #FED253;
+}
+.reveal .backgrounds .slide-background.green {
+  background-color: #4AB396;
+}
+.reveal .backgrounds .slide-background.blue {
+  background-color: #048ED9;
+}
+.reveal .backgrounds .slide-background.pink {
+  background-color: #FBB3B2;
+}
+.reveal .backgrounds .slide-background.purple {
+  background-color: #431261;
+}
+.reveal .backgrounds .slide-background.black {
+  background-color: #141414;
+}
+.reveal .backgrounds .slide-background.gray {
+  background-color: #EEEEEE;
+}
+
+/*********************************************
+ * ZoCom SLIDE TWEAKS
+ *********************************************/
+.reveal .slides .task h2, .reveal .slides .code h2 {
+  position: relative;
+}
+.reveal .slides .task h2::after, .reveal .slides .code h2::after {
+  content: "";
+  width: 120px;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 140%;
+}
+.reveal .slides .code h2::after {
+  background-color: white;
+}
+.reveal .slides .red h1, .reveal .slides .red h2, .reveal .slides .red h3, .reveal .slides .red h4, .reveal .slides .red p, .reveal .slides .red li,
+.reveal .slides .green h1,
+.reveal .slides .green h2,
+.reveal .slides .green h3,
+.reveal .slides .green h4,
+.reveal .slides .green p,
+.reveal .slides .green li,
+.reveal .slides .blue h1,
+.reveal .slides .blue h2,
+.reveal .slides .blue h3,
+.reveal .slides .blue h4,
+.reveal .slides .blue p,
+.reveal .slides .blue li,
+.reveal .slides .purple h1,
+.reveal .slides .purple h2,
+.reveal .slides .purple h3,
+.reveal .slides .purple h4,
+.reveal .slides .purple p,
+.reveal .slides .purple li,
+.reveal .slides .darkgrey h1,
+.reveal .slides .darkgrey h2,
+.reveal .slides .darkgrey h3,
+.reveal .slides .darkgrey h4,
+.reveal .slides .darkgrey p,
+.reveal .slides .darkgrey li,
+.reveal .slides .intro h1,
+.reveal .slides .intro h2,
+.reveal .slides .intro h3,
+.reveal .slides .intro h4,
+.reveal .slides .intro p,
+.reveal .slides .intro li,
+.reveal .slides .code h1,
+.reveal .slides .code h2,
+.reveal .slides .code h3,
+.reveal .slides .code h4,
+.reveal .slides .code p,
+.reveal .slides .code li,
+.reveal .slides .quote h1,
+.reveal .slides .quote h2,
+.reveal .slides .quote h3,
+.reveal .slides .quote h4,
+.reveal .slides .quote p,
+.reveal .slides .quote li,
+.reveal .slides .discussion h1,
+.reveal .slides .discussion h2,
+.reveal .slides .discussion h3,
+.reveal .slides .discussion h4,
+.reveal .slides .discussion p,
+.reveal .slides .discussion li,
+.reveal .slides .black h1,
+.reveal .slides .black h2,
+.reveal .slides .black h3,
+.reveal .slides .black h4,
+.reveal .slides .black p,
+.reveal .slides .black li {
+  color: white;
+}
+.reveal .slides .red blockquote span::before,
+.reveal .slides .green blockquote span::before,
+.reveal .slides .blue blockquote span::before,
+.reveal .slides .purple blockquote span::before,
+.reveal .slides .darkgrey blockquote span::before,
+.reveal .slides .intro blockquote span::before,
+.reveal .slides .code blockquote span::before,
+.reveal .slides .quote blockquote span::before,
+.reveal .slides .discussion blockquote span::before,
+.reveal .slides .black blockquote span::before {
+  border-top: 0.14rem solid white;
+}
+.reveal .slides .red blockquote::before,
+.reveal .slides .green blockquote::before,
+.reveal .slides .blue blockquote::before,
+.reveal .slides .purple blockquote::before,
+.reveal .slides .darkgrey blockquote::before,
+.reveal .slides .intro blockquote::before,
+.reveal .slides .code blockquote::before,
+.reveal .slides .quote blockquote::before,
+.reveal .slides .discussion blockquote::before,
+.reveal .slides .black blockquote::before {
+  color: rgba(255, 255, 255, 0.8);
+}
+.reveal .slides .red blockquote::after,
+.reveal .slides .green blockquote::after,
+.reveal .slides .blue blockquote::after,
+.reveal .slides .purple blockquote::after,
+.reveal .slides .darkgrey blockquote::after,
+.reveal .slides .intro blockquote::after,
+.reveal .slides .code blockquote::after,
+.reveal .slides .quote blockquote::after,
+.reveal .slides .discussion blockquote::after,
+.reveal .slides .black blockquote::after {
+  color: rgba(255, 255, 255, 0.8);
+}
+.reveal .slides .yellow h1, .reveal .slides .yellow h2, .reveal .slides .yellow h3, .reveal .slides .yellow h4, .reveal .slides .yellow p, .reveal .slides .yellow li,
+.reveal .slides .gray h1,
+.reveal .slides .gray h2,
+.reveal .slides .gray h3,
+.reveal .slides .gray h4,
+.reveal .slides .gray p,
+.reveal .slides .gray li,
+.reveal .slides .pink h1,
+.reveal .slides .pink h2,
+.reveal .slides .pink h3,
+.reveal .slides .pink h4,
+.reveal .slides .pink p,
+.reveal .slides .pink li {
+  color: black;
+}
+
+/*********************************************
+* ZOCOM SLIDE TEMPLATES LAYOUT TWEEKS
+*********************************************/
+.reveal .slides {
+  display: flex;
+  flex-direction: column;
+}
+.reveal .slides section:not(.stack) {
+  display: flex !important;
+  flex-direction: column;
+}
+.reveal .slides section:not(.stack, .intro, .quote) {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: none;
+}
+.reveal .slides .intro h3 {
+  margin-top: 10rem;
+}
+.reveal .slides .code h1, .reveal .slides .code h2, .reveal .slides .code h3, .reveal .slides .code h4, .reveal .slides .code p, .reveal .slides .code li, .reveal .slides .task h1, .reveal .slides .task h2, .reveal .slides .task h3, .reveal .slides .task h4, .reveal .slides .task p, .reveal .slides .task li {
+  text-align: left;
+}
+.reveal .slides section.discussion, .reveal .slides section.task, .reveal .slides section.code {
+  max-width: 50%;
+  align-self: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+.reveal .slides section.discussion h1, .reveal .slides section.discussion h2, .reveal .slides section.discussion h3, .reveal .slides section.discussion h4, .reveal .slides section.discussion p, .reveal .slides section.discussion li, .reveal .slides section.task h1, .reveal .slides section.task h2, .reveal .slides section.task h3, .reveal .slides section.task h4, .reveal .slides section.task p, .reveal .slides section.task li, .reveal .slides section.code h1, .reveal .slides section.code h2, .reveal .slides section.code h3, .reveal .slides section.code h4, .reveal .slides section.code p, .reveal .slides section.code li {
+  text-align: left;
+}
+.reveal .slides section.task, .reveal .slides section.code {
+  align-self: flex-start;
+}
+.reveal .slides section[data-layout=two-column],
+.reveal .slides section[data-layout=three-column] {
+  display: grid !important;
+  grid-template-rows: auto 100%;
+  align-items: start;
+}
+.reveal .slides section[data-layout=two-column] > h1:first-of-type, .reveal .slides section[data-layout=two-column] > h2:first-of-type,
+.reveal .slides section[data-layout=three-column] > h1:first-of-type,
+.reveal .slides section[data-layout=three-column] > h2:first-of-type {
+  grid-column: span 2;
+}
+.reveal .slides section[data-layout=two-column] {
+  grid-template-columns: 1fr 1fr;
+}
+.reveal .slides section[data-layout=three-column] {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.reveal .slides section[data-layout=top] {
+  justify-content: flex-start;
+  padding-top: 2.5rem;
+}
+
+.reveal .intro h1 {
+  margin: 4rem 0 1rem 0;
+}
+.reveal .intro h2 {
+  margin: 2rem 0;
+}
+.reveal .intro h6 {
+  font-size: 1.6rem;
+  margin-top: 6rem;
+}
+.reveal .intro h6 > a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
