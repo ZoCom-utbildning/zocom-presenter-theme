@@ -1,0 +1,37 @@
+@media print {
+  
+  .backgrounds {
+    background-color: $lightGrey;
+    color: $darkGrey;
+  }
+  
+  .slides {
+    
+    .intro {
+      background-color: $red;
+    }
+    
+    .code {
+      background-color: $purple;
+    }
+    
+    .task {
+      background-color: $yellow;
+    }
+    
+    .discussion {
+      background-color: $green;
+    }
+    
+    .plain, .basic, .complex {
+      .red    	{ background-color: $red; }
+      .yellow 	{ background-color: $yellow; }
+      .green  	{ background-color: $green; }
+      .blue   	{ background-color: $blue; }
+      .pink   	{ background-color: $pink; }
+      .purple 	{ background-color: $purple; }
+      .lightgrey  { background-color: $lightGrey; }
+      .darkgrey   { background-color: $darkGrey; }
+    }
+  }
+}
