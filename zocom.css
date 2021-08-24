@@ -609,3 +609,47 @@
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
 }
+
+@media print {
+  .backgrounds {
+    background-color: #EEEEEE;
+    color: #141414;
+  }
+
+  .slides .intro {
+    background-color: #FE2C2C;
+  }
+  .slides .code {
+    background-color: #431261;
+  }
+  .slides .task {
+    background-color: #FED253;
+  }
+  .slides .discussion {
+    background-color: #4AB396;
+  }
+  .slides .plain .red, .slides .basic .red, .slides .complex .red {
+    background-color: #FE2C2C;
+  }
+  .slides .plain .yellow, .slides .basic .yellow, .slides .complex .yellow {
+    background-color: #FED253;
+  }
+  .slides .plain .green, .slides .basic .green, .slides .complex .green {
+    background-color: #4AB396;
+  }
+  .slides .plain .blue, .slides .basic .blue, .slides .complex .blue {
+    background-color: #048ED9;
+  }
+  .slides .plain .pink, .slides .basic .pink, .slides .complex .pink {
+    background-color: #FBB3B2;
+  }
+  .slides .plain .purple, .slides .basic .purple, .slides .complex .purple {
+    background-color: #431261;
+  }
+  .slides .plain .lightgrey, .slides .basic .lightgrey, .slides .complex .lightgrey {
+    background-color: #EEEEEE;
+  }
+  .slides .plain .darkgrey, .slides .basic .darkgrey, .slides .complex .darkgrey {
+    background-color: #141414;
+  }
+}
